@@ -1,5 +1,8 @@
 .App {
     text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .App-logo {
@@ -14,18 +17,50 @@
 }
 
 .App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
+    background-color: #0366d6;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
+    padding: 30px 0;
 }
 
 .App-link {
     color: #61dafb;
+}
+
+/* Custom styling for the financial app */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input, button {
+    font-family: inherit;
+}
+
+/* Fix for react-native-web elements */
+div[role="button"] {
+    cursor: pointer;
+}
+
+/* Chart container styles */
+canvas {
+    max-width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .marketGrid, .actionsContainer, .indicesGrid {
+        flex-direction: column;
+    }
+    
+    .marketCard, .actionButton, .indexCard {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
 }
 
 @keyframes App-logo-spin {
